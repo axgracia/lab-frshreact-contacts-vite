@@ -14,7 +14,7 @@ function App() {
 
 const ContactList = () => {
   // Step 1: Initialize state with an array of 5 contacts
-  const [contactList] = useState(contacts.slice(0, 5));
+  const [contactList] = useState(contacts.slice(0, 6));
 
   return (
     <table>
@@ -23,6 +23,8 @@ const ContactList = () => {
           <th>Picture</th>
           <th>Name</th>
           <th>Popularity</th>
+          <th>Won an Oscar</th>
+          <th>Won an Emmy</th>
         </tr>
       </thead>
       <tbody>
@@ -33,6 +35,8 @@ const ContactList = () => {
             </td>
             <td>{contact.name}</td>
             <td>{contact.popularity}</td>
+            <td>{contact.wonOscar ? '🏆' : ''}</td>
+            <td>{contact.wonEmmy ? '🌟' : ''}</td>
           </tr>
         ))}
       </tbody>
